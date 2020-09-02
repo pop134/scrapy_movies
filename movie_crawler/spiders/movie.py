@@ -9,10 +9,10 @@ import datetime, time
 class MovieSpider(scrapy.Spider):
     name = 'movie'
     allowed_domains = ['']
-    start_urls = ['http://www.phimmoi.net/phim-le/']
+    start_urls = ['http://www.phimmoizz.net/phim-le/']
 
     def parse(self, response):
-        yield Request(url='http://www.phimmoi.net/phim-le/',
+        yield Request(url='http://www.phimmoizz.net/phim-le/',
                       callback=self.parsing_pages,
                       dont_filter=True)
 
